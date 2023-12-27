@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/coffeeShopsMapFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.getcoffee.presentation.start.ui.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.getcoffee.presentation.registration.ui.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.example.getcoffee.presentation.authorization.ui.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" />
+    <fragment
+        android:id="@+id/coffeeShopsFragment"
+        android:name="com.example.getcoffee.presentation.coffeeshops.ui.CoffeeShopsFragment"
+        android:label="fragment_coffeeshops"
+        tools:layout="@layout/fragment_coffeeshops" />
+    <fragment
+        android:id="@+id/coffeeShopsMapFragment"
+        android:name="com.example.getcoffee.presentation.coffeeshopsmap.ui.CoffeeShopsMapFragment"
+        android:label="fragment_coffeeshopsmap"
+        tools:layout="@layout/fragment_coffeeshopsmap" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.getcoffee.presentation.menu.ui.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.getcoffee.presentation.order.ui.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+</navigation>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_marginHorizontal="@dimen/default_margin"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="6dp"
+    android:backgroundTint="@color/brown_light"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="14dp">
+
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/sf_ui_bold"
+            android:text="@string/default_text"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/btn_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tv_distance_to_shop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_distance_to_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_regular"
+            android:text="@string/default_text"
+            android:textColor="@color/brown_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shop_name" />
+
+        <ImageButton
+            android:id="@+id/btn_add_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_add_button"
+            android:padding="6dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/brown" />
+
+
+        <TextView
+            android:id="@+id/tv_product_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="@font/sf_ui_bold"
+            android:text="100"
+            android:textColor="@color/brown"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_add_product"
+            app:layout_constraintEnd_toStartOf="@+id/btn_add_product"
+            app:layout_constraintTop_toTopOf="@id/btn_add_product" />
+
+        <ImageButton
+            android:id="@+id/btn_remove_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_remove_button"
+            android:padding="6dp"
+            android:src="@drawable/ic_remove"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_add_product"
+            app:layout_constraintEnd_toStartOf="@id/tv_product_count"
+            app:layout_constraintTop_toTopOf="@+id/btn_add_product"
+            app:tint="@color/brown" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
