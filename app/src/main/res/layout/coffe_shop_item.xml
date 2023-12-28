@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"/>
 
         <TextView
+            android:visibility="invisible"
             android:id="@+id/tv_distance_to_shop"
             android:textSize="14sp"
             android:fontFamily="@font/sf_ui_regular"
