@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainButtonDark">
+        <item name="android:layout_marginHorizontal">@dimen/default_margin</item>
+        <item name="android:backgroundTint">@color/brown_dark</item>
+        <item name="android:fontFamily">@font/sf_ui_bold</item>
+        <item name="android:textColor">@color/brown_light</item>
+        <item name="android:textSize">@dimen/btn_text_size</item>
+    </style>
+
+    <style name="MainButtonLight" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_marginHorizontal">@dimen/default_margin</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:strokeColor">@color/brown_dark</item>
+        <item name="android:fontFamily">@font/sf_ui_bold</item>
+        <item name="android:textColor">@color/brown_dark</item>
+        <item name="android:textSize">@dimen/btn_text_size</item>
+    </style>
+
+    <style name="TextInputLayout">
+        <item name="android:textColorHint">@color/brown_text</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="boxStrokeColor">@color/edit_text_stroke_color</item>
+        <item name="endIconCheckable">true</item>
+        <item name="endIconDrawable">@drawable/ic_close</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="expandedHintEnabled">true</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="android:layout_marginHorizontal">@dimen/default_margin</item>
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:imeOptions">actionGo</item>
+        <item name="android:inputType">text</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:saveEnabled">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/brown_text</item>
+    </style>
+
+    <style name="ZoomButtonStyle" >
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:background">@drawable/zoom_button_shape</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+    </style>
+
+</resources>
