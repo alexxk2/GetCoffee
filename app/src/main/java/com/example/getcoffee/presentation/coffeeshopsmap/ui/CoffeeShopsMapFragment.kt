@@ -16,6 +16,7 @@ import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.ScreenPoint
 import com.yandex.mapkit.geometry.Point
 import com.yandex.mapkit.map.CameraPosition
+import com.yandex.mapkit.map.TextStyle
 import com.yandex.runtime.image.ImageProvider
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -70,15 +71,23 @@ class CoffeeShopsMapFragment : Fragment() {
 
         listOfPlaces.forEach { location ->
             val tempPoint = Point(location.point.latitude, location.point.longitude)
-            addPlaceMarkOnMap(tempPoint)
+            addPlaceMarkOnMap(tempPoint, location)
         }
     }
 
-    private fun addPlaceMarkOnMap(worldPoint: Point) {
-        binding.yandexMapsView.map.mapObjects.addPlacemark(
+    private fun addPlaceMarkOnMap(worldPoint: Point, location: Location) {
+        val placemark = binding.yandexMapsView.map.mapObjects.addPlacemark(
             worldPoint,
             ImageProvider.fromResource(requireContext(), R.drawable.ic_coffee_shop)
         )
+        placemark.setText(location.name)
+        placemark.setTextStyle(TextStyle( 10f, R.color.brown,null,TextStyle.Placement.BOTTOM, 1f,true,true))
+
+        placemark.addTapListener { _, _ ->
+            val action = CoffeeShopsMapFragmentDirections.actionCoffeeShopsMapFragmentToMenuFragment(location.id, token)
+            findNavController().navigate(action)
+            true
+        }
     }
 
     private fun clearMapFromAllObjects() {

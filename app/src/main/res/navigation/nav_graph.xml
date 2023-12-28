@@ -46,6 +46,9 @@
         <argument
             android:name="token"
             app:argType="string" />
+        <action
+            android:id="@+id/action_coffeeShopsFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/coffeeShopsMapFragment"
@@ -67,6 +70,12 @@
         <action
             android:id="@+id/action_menuFragment_to_orderFragment"
             app:destination="@id/orderFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="token"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/orderFragment"

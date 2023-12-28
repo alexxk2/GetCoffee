@@ -23,4 +23,8 @@
     <string name="description_add_button">Это кнопка добавить</string>
     <string name="description_remove_button">Это кнопка убрать</string>
     <string name="error_message">Что-то пошло не так, не удалось получить данные</string>
+    <string name="price">%1$d руб</string>
+    <string name="payment_is_ok">Оплата прошла, спасибо за заказ</string>
+    <string name="empty_order">Вы пока ничего не заказали ;)</string>
+    <string name="passwords_are_not_equal">Пароли не совпадают</string>
 </resources>

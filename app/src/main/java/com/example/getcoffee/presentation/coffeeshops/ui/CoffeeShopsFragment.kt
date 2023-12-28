@@ -53,8 +53,9 @@ class CoffeeShopsFragment : Fragment() {
     }
 
     private fun setRecyclerView(){
-        adapter = CoffeeShopsAdapter {Location ->
-            //клик вызов меню(передать id)
+        adapter = CoffeeShopsAdapter {location ->
+            val action = CoffeeShopsFragmentDirections.actionCoffeeShopsFragmentToMenuFragment(location.id,token)
+            findNavController().navigate(action)
         }
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())

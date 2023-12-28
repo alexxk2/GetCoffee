@@ -4,5 +4,6 @@ data class MenuItem(
     val id: Int,
     val name: String,
     val imageURL : String,
-    val price: Int
+    val price: Int,
+    var count: Int = 0
 )
