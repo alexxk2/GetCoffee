@@ -13,6 +13,7 @@
     <string name="go_to_payment">Перейти к оплате</string>
     <string name="your_order">Ваш заказ</string>
     <string name="pay">Оплатить</string>
+    <string name="pay_with_sum">Оплатить %1$d руб</string>
     <string name="order_message">Время ожидания заказа 15 минут!\n Спасибо, что выбрали нас</string>
     <string name="back_button_description">Это кнопка навигации назад</string>
     <string name="email">e-mail</string>

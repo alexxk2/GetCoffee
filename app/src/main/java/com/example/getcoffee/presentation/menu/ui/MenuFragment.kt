@@ -102,10 +102,16 @@ class MenuFragment : Fragment() {
                 binding.tvError.visibility = View.GONE
             }
             is MenuState.OrderContent ->{
+                var sum = 0
+                state.menus.forEach {
+                    sum+=it.price*it.count
+                }
                 binding.tvEmpty.visibility = View.GONE
                 binding.flOrder.visibility = View.VISIBLE
+
                 binding.tvTitle.text = getString(R.string.your_order)
-                binding.btnToPay.text = getString(R.string.pay)
+
+                binding.btnToPay.text = getString(R.string.pay_with_sum,sum)
 
                 binding.recyclerView.visibility = View.GONE
                 binding.progressBar.visibility = View.GONE
