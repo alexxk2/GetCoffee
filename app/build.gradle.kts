@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,8 +10,9 @@ plugins {
     //Kotlin symbol processing  for Room
     id("com.google.devtools.ksp")
     //Hilt
-    id("kotlin-kapt")
+    kotlin("kapt")
     id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -24,6 +27,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
+
+        buildConfigField("String","MAPKIT_API_KEY","\"${properties.getProperty("MAPKIT_API_KEY")}\"")
+
     }
 
     buildTypes {
@@ -50,6 +59,7 @@ android {
 
     configurations {
         implementation.get().exclude(mapOf("group" to "org.jetbrains", "module" to "annotations"))
+
     }
 }
 
@@ -68,7 +78,8 @@ dependencies {
     val fragment = "1.6.2"
     val glideVersion = "4.15.0"
     val gsonVersion = "2.10.1"
-    val hiltVersion = "2.49"
+    val hiltVersion = "2.50"
+    val retrofitVersion ="2.9.0"
 
     implementation("androidx.core:core-ktx:$coreKtxVersion")
     implementation("androidx.appcompat:appcompat:$appCompat")
@@ -104,5 +115,13 @@ dependencies {
     implementation("androidx.security:security-crypto:1.1.0-alpha06")
     //hilt
     implementation("com.google.dagger:hilt-android:$hiltVersion")
-    annotationProcessor("com.google.dagger:hilt-compiler:$hiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+    //Retrofit
+    implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    implementation ("com.squareup.retrofit2:retrofit:$retrofitVersion")
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
