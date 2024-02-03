@@ -18,6 +18,7 @@
 
 + Kotlin
 + Clean Architecture
++ Yandex MapKit
 + Hilt
 + Retrofit
 + SOLID
