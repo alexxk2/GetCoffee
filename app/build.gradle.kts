@@ -73,7 +73,7 @@ dependencies {
     val materialVersion = "1.11.0"
     val constraintLayout = "2.1.4"
     val junit = "4.13.2"
-    val espresso = "espresso"
+    val espresso = "3.5.1"
     val androidxJunit = "1.1.5"
     val fragment = "1.6.2"
     val glideVersion = "4.15.0"
